@@ -24,9 +24,6 @@ The pipeline follows a **Bronze → Silver → Gold** layered design:
   - Daily GMV
   - Order volume
   - Average Order Value (AOV)
-- Built **cohort-based customer retention analysis**
-  - Cohorts defined by customers’ first purchase month
-  - Retention tracked using `customer_unique_id` to ensure correct user-level analysis
 
 ---
 
@@ -35,7 +32,6 @@ The pipeline follows a **Bronze → Silver → Gold** layered design:
 - Spark SQL–based transformations on Databricks
 - Fact and dimension data modeling
 - Gold-layer KPI aggregation for reporting
-- Cohort retention analysis to evaluate repeat purchasing behavior
 - End-to-end pipeline design from raw data to analytical insights
 
 ---
@@ -66,7 +62,6 @@ The project is organized into the following Databricks notebooks:
 
 - Executive-level revenue and order monitoring
 - Customer purchasing behavior analysis
-- Retention and cohort analysis for growth insights
 - Reusable analytics tables for BI and reporting
 
 ---
