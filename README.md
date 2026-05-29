@@ -47,7 +47,6 @@ The project is organized into the following Databricks notebooks:
 - `01_bronze_ingestion` – Raw data ingestion
 - `02_silver_transformation` – Data cleaning and modeling
 - `03_gold_kpi` – Business KPI aggregation
-- `04_cohort_kpi` – Customer retention and cohort analysis
 
 > **Note:** Notebooks are exported from Databricks Community Edition as DBC archives due to platform limitations.  
 > SQL logic is also provided in readable `.sql` files for easy review.
