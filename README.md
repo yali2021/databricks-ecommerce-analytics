@@ -1,7 +1,6 @@
 # Data Transformation and Analytics with Databricks
-
-# E-commerce data transformation project using Databricks and Spark SQL with data cleaning, quality checks, and Silver/Gold layers.
-
+E-commerce data transformation project using Databricks and Spark SQL with data cleaning, quality checks, and Silver/Gold layers.
+---
 ## Project Overview
 
 This project uses an e-commerce dataset to practice data transformation and analysis in Databricks.
