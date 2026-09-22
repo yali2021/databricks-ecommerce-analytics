@@ -1,74 +1,59 @@
-# End-to-End E-commerce Analytics Pipeline on Databricks
+# Data Transformation and Analytics with Databricks
 
-This project demonstrates an end-to-end analytics pipeline built on **Databricks** using a **Lakehouse architecture**.  
-It covers raw data ingestion, data modeling, business KPI development, and cohort-based customer retention analysis.
+## Project Overview
 
----
+This project uses an e-commerce dataset to practice data transformation and analysis in Databricks.
 
-## Architecture Overview
+The data is organized into Bronze, Silver, and Gold layers. Raw CSV files are loaded into the Bronze layer, cleaned and transformed in the Silver layer, and aggregated into business metrics in the Gold layer.
 
-The pipeline follows a **Bronze → Silver → Gold** layered design:
+## Data Pipeline
 
-### 🥉 Bronze Layer – Raw Ingestion
-- Ingested raw e-commerce CSV datasets into Databricks tables
-- Preserved original schema and values for traceability
+### Bronze
 
-### 🥈 Silver Layer – Data Modeling & Transformation
-- Built **clean fact tables**, **dimension tables**, and **enriched datasets**
-- Standardized data types (timestamps, numeric fields)
-- Applied business logic using **Spark SQL**
-- Designed reusable, analysis-ready tables
+Raw e-commerce CSV files are loaded into Databricks tables without changing the original values.
 
-### 🥇 Gold Layer – Business Analytics
-- Developed business-facing KPI tables:
-  - Daily GMV
-  - Order volume
-  - Average Order Value (AOV)
+### Silver
+
+The raw data is cleaned and transformed using Spark SQL.
+
+Main steps include:
+- Standardizing timestamps and numeric fields
+- Creating fact and dimension tables
+- Applying business rules and transformations
+- Preparing cleaned tables for analysis
+
+### Gold
+
+Gold tables contain aggregated metrics used for analysis, including:
+- Daily GMV
+- Order volume
+- Average Order Value (AOV)
 
 ---
 
 ## Key Features
 
-- Spark SQL–based transformations on Databricks
-- Fact and dimension data modeling
-- Gold-layer KPI aggregation for reporting
-- End-to-end pipeline design from raw data to analytical insights
+- Data transformation using Spark SQL in Databricks
+- Fact and dimension table creation
+- Data quality checks and data cleaning
+- Gold-layer tables for sales trends and average order value
 
 ---
 
 ## Notebooks
 
-The project is organized into the following Databricks notebooks:
+The project includes three Databricks notebooks:
 
-- `01_bronze_ingestion` – Raw data ingestion
-- `02_silver_transformation` – Data cleaning and modeling
-- `03_gold_kpi` – Business KPI aggregation
+- `01_bronze_ingestion` – Loads raw e-commerce data into Bronze tables
+- `02_silver_transformation` – Cleans and transforms the data into fact and dimension tables
+- `03_gold_kpi` – Creates Gold tables for sales trends and average order value
 
-> **Note:** Notebooks are exported from Databricks Community Edition as DBC archives due to platform limitations.  
-> SQL logic is also provided in readable `.sql` files for easy review.
 
----
+## Technologies
 
-## Technologies Used
-
-- Databricks (Community Edition)
+- Databricks Community Edition
 - Spark SQL
-- SQL-based data modeling
-- Lakehouse architecture (Bronze / Silver / Gold)
+- Bronze / Silver / Gold data layers
 
 ---
 
-## Business Use Cases
-
-- Executive-level revenue and order monitoring
-- Customer purchasing behavior analysis
-- Reusable analytics tables for BI and reporting
-
----
-
-## Notes
-
-This project is intended for **portfolio and demonstration purposes**.  
-Notebooks are provided for code review and architectural understanding rather than direct execution.
-
----
